@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qgc-aurelia"
+authors = [
+    {name = "Bjørn Nødland Fuglestad", email = "bjorn@jaersense.no"}
+]
+maintainers = [
+    {name = "Bjørn Nødland Fuglestad", email = "bjorn@jaersense.no"}
+]
+description = "Converts GeoJson files into QGroundControl plans for Aurelia X6 spraying system."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["ground controller", "geospatial", "drone", "uav", "uas", "uuv", "robotics", "autonomous", 
+    "vehicle", "system", "gcs", "qgc", "aurelia", "mavlink", "mavproxy", "mavros", "mavlink-router"]
+license = {file = "License.txt"}
+classifiers = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 3 - Alpha",
+
+    # Indicate who your project is intended for
+    #"Intended Audience :: Developers",
+    #"Topic :: Software Development :: Build Tools",
+
+    # Pick your license as you wish (see also "license" above)
+    #"License :: OSI Approved :: MIT License",
+
+    # Specify the Python versions you support here.
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "geopandas",
+    "folium",
+    "numpy",
+]
+dynamic = ["version"]
+
+[project.urls]
+#Homepage = ""
+
+[project.scripts]
+#qgc-aurelia-cli = "qgc_aurelia.__main__:main"
+
+[project.gui-scripts]
+qgc-aurelia = "qgc_aurelia.app:main"

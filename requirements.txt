@@ -1,0 +1,4 @@
+geopandas
+numpy
+folium
+shapely
